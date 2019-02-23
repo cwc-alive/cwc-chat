@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://gitlab.com/cwc-alive/alive-textual-hotline/issues"
   },
-  "homepage": "https://gitlab.com/cwc-alive/alive-textual-hotline#readme"
+  "homepage": "https://gitlab.com/cwc-alive/alive-textual-hotline#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
 }
