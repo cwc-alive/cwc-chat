@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link href="/src/main.css" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="./src/main.css"/>
 
 
     <title>Hello, world!</title>
@@ -15,12 +17,46 @@
   </head>
   <body>
 
+    <!--
+    <div class = "top-bar">
+      test
+    </div>
     <div id="livechat-full">
       <div id="wrapper">
         <div id = "messages"></div>
         <textarea placeholder = "Write a message .." id = "message-input"></textarea>
       </div>
     </div>
+
+    <div id = "livechat-full">
+      <div id = "wrapper">
+
+      </div>
+    </div>
+  -->
+
+    <div id="content">
+
+      <div id = "message-queue">
+
+      </div>
+
+      <div id="message-list">
+
+
+        </div>
+
+
+      <div id="footer">
+        <textarea placeholder="Write a message..." id="message-input"></textarea>
+        <button id="send-button">
+          <svg fill="#b2bbc6" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+        </button>
+      </div>
+
 
     <!-- Chat -->
     <script src="https://unpkg.com/@livechat/livechat-visitor-sdk@0.35.2/dist/livechat-visitor-sdk.min.js"></script>

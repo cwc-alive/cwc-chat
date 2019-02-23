@@ -5,17 +5,42 @@ let sdk = window.LivechatVisitorSDK.init({
   license: LICENSE,
 })
 
+console.log(sdk);
+
+let user_id = 0;
+
 //appends message to message window
-function appendMessage(text) {
-  let messageDivContainer = document.getElementById('messages');
+function appendMessage(text, authorType) {
+  let messageDivContainer = document.getElementById('message-list');
+
   let messageDiv = document.createElement('div');
-  messageDiv.innerHTML = text;
-  messageDivContainer.append(messageDiv)
+  messageDiv.classList.add('message-container');
+
+  if (authorType == 'agent'){
+    messageDiv.classList.add('agent');
+  }
+
+  let message = document.createElement('p');
+  message.classList.add('message');
+
+  message.innerHTML = text;
+  messageDiv.append(message);
+  messageDivContainer.append(messageDiv);
+
 }
 
 //update message box
 sdk.on('new_message', function (data) {
-  appendMessage(data.text)
+  console.log(data);
+
+  let authorType;
+  if (data.hasOwnProperty("customId")) {
+    authorType = 'respondent';
+  }else {
+    authorType = 'agent';
+  }
+
+  appendMessage(data.text, authorType)
   console.log(data);
 })
 
@@ -24,6 +49,7 @@ function sendMessage() {
   let input = document.getElementById('message-input');
   let text = input.value;
 
+  console.log('test');
   sdk.sendMessage({
     customId: String(Math.random()),
     text: text
