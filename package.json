@@ -1,0 +1,19 @@
+{
+  "name": "cwc-alive",
+  "version": "1.0.0",
+  "description": "Simple Chat app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/cwc-alive/alive-textual-hotline.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/cwc-alive/alive-textual-hotline/issues"
+  },
+  "homepage": "https://gitlab.com/cwc-alive/alive-textual-hotline#readme"
+}
