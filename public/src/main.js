@@ -66,3 +66,7 @@ document.getElementById('message-input').onkeydown = function (event) {
     return false;
   }
 }
+
+document.getElementById('send-button').onclick = function (event) {
+  sendMessage();
+}
