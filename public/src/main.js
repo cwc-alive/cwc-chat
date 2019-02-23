@@ -1,3 +1,5 @@
+var LICENSE = 10644347
+
 //grab sdk
 let sdk = window.LivechatVisitorSDK.init({
   license: LICENSE,
@@ -13,7 +15,8 @@ function appendMessage(text) {
 
 //update message box
 sdk.on('new_message', function (data) {
-  appendMessage(text)
+  appendMessage(data.text)
+  console.log(data);
 })
 
 //sends out message
