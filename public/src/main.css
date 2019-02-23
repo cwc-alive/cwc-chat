@@ -1,23 +1,29 @@
+body {
+  position: absolute;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
 * {
   box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
   margin: 0;
-  min-height: 1500px;
-  background-color: #F6F6F7;
-
+  padding: 0;
+  border: 0;
 }
 
 #content {
   font-weight: 300;
-  margin: 0 auto;
   background-color: #F6F6F7;
   text-rendering: optimizelegibility;
   letter-spacing: .04em;
   color: rgb(49, 56, 79);
   line-height: 1.45em;
+
+
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  height: 100%;
 }
 
 .inner-container {
@@ -123,7 +129,7 @@ button:hover {
 
 #livechat {
   width: 300px;
-  height: 500px;
+  height: 1000px;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -198,15 +204,13 @@ button:hover {
 }
 
 #message-list {
-  flex-grow: 1;
   display: flex;
+  flex: 1 1 90%;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-end;
-  padding: .5em;
-  background-color: #e9eef4;
-  overflow-y: auto;
-  min-height: 0px;
-  position: relative;
+  align-content: flex-start;
+  overflow: auto;
 }
 
 #message-list > div:last-child {
@@ -246,6 +250,7 @@ button:hover {
 
 .message-container {
   margin-bottom: .5em;
+  padding: 8px;
   max-width: 90%;
   display: flex;
   align-items: flex-start;
@@ -295,6 +300,10 @@ button:hover {
   display: flex;
   background-color: #fff;
   flex-shrink: 0;
+
+
+  display: flex;
+  flex: 1 1 5%;
 }
 
 #send-button {
