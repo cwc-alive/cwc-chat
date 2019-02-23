@@ -1,0 +1,18 @@
+#livechat-full {
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  height: auto !important;
+  font-size: 50px;
+}
+
+#wrapper {
+  padding-right: 0;
+  padding-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+#title {
+  border-radius: 0;
+}
