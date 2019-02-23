@@ -1,18 +1,91 @@
+#operator_avatar {
+  border: none !important;
+}
+
 #livechat-full {
-  top: 0 !important;
   bottom: 0 !important;
   right: 0 !important;
-  height: auto !important;
-  font-size: 50px;
+  height: 740px !important;
+  max-height: 100% !important;
+  width: 400px !important;
 }
 
 #wrapper {
-  padding-right: 0;
-  padding-top: 0;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+  padding: 2rem 2rem 2rem 2rem !important;
+  top: -20px !important;
+}
+
+.pop-in #content, #wrapper {
+  background: none;
+  border-radius: 0.5rem !important;
+}
+
+.title-bg, #body-inner, #operators td, #survey-after-greeting, #footer td {
+  background: rgba(0,0,0,.65) !important;
+  box-shadow: none !important;
+}
+
+.operators-bar .wrapper, .title-button, .title-button:hover {
+  background: none !important;
+}
+
+.operator-name, .operator-role, .icon-thumbs-down, .icon-thumbs-up, .icon-email {
+  color: #fff !important;
+  border-right-color: #fff !important;
+}
+
+.avatar {
+  border-radius: 100% !important;
 }
 
 #title {
-  border-radius: 0;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+#body-container p {
+  padding: .25rem 1rem;
+}
+
+.msg-text {
+  padding: .9rem 1.1rem;
+  width:auto;
+  display: inline-block;
+  margin-bottom: .125rem !important;
+}
+
+.msg-text a {
+  color: inherit!important;
+}
+
+.client .msg-text {
+  background: #3e7ce4;
+  color: #fff;
+  border-radius: 1.4rem 1.4rem .3rem 1.4rem;
+}
+
+.client.same-author .msg-text {
+  border-radius: 1.4rem .3rem .3rem 1.4rem;
+}
+
+.client.last-sent .msg-text {
+  border-radius: 1.4rem .3rem 1.4rem 1.4rem;
+}
+
+.operator .msg-text {
+  background: #fff;
+  color: #000;
+  border-radius: 1.3rem 1.4rem 1.4rem .3rem;
+}
+
+.operator.same-author .msg-text {
+  border-radius: .3rem 1.4rem 1.4rem .3rem;
+}
+
+.client .author, .operator .author {
+  color: #fff !important;
+}
+
+.client {
+  text-align: right;
 }
