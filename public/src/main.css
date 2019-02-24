@@ -417,7 +417,7 @@ button:hover {
   display: none;
 }
 
-@media (max-width: 600px) {
+@media  (max-width: 600px) {
   #livechat {
     top: 0;
     bottom: 0;

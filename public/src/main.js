@@ -5,6 +5,26 @@ let sdk = window.LivechatVisitorSDK.init({
   license: LICENSE,
 })
 
+
+$(document).ready(function () {
+
+  //update message box
+  sdk.on('new_message', function (data) {
+    console.log(data);
+
+    let authorType;
+    if (data.hasOwnProperty("customId")) {
+      authorType = 'respondent';
+    }else {
+      authorType = 'agent';
+    }
+
+    appendMessage(data.text, authorType)
+    console.log(data);
+  })
+
+})
+
 console.log(sdk);
 
 let user_id = 0;
@@ -28,21 +48,6 @@ function appendMessage(text, authorType) {
   messageDivContainer.append(messageDiv);
 
 }
-
-//update message box
-sdk.on('new_message', function (data) {
-  console.log(data);
-
-  let authorType;
-  if (data.hasOwnProperty("customId")) {
-    authorType = 'respondent';
-  }else {
-    authorType = 'agent';
-  }
-
-  appendMessage(data.text, authorType)
-  console.log(data);
-})
 
 //sends out message
 function sendMessage() {
